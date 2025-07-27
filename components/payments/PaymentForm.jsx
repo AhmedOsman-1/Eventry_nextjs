@@ -1,6 +1,12 @@
-const PaymentForm = () => {
+'use client';
+
+import { useAuth } from "@/app/hooks/useAuth";
+import { addGoingEvent } from "@/app/actions";
+const PaymentForm = ({eventId}) => {
+
+    const {auth} = useAuth();
     return (
-        <htmlForm>
+        <form action = {() => addGoingEvent(eventId, auth)} className="space-y-4">
             <div className="my-4 space-y-2">
                 <label htmlhtmlFor="name" className="block">
                     Name
@@ -61,7 +67,7 @@ const PaymentForm = () => {
                 className="w-full my-8 bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md">
                 Pay Now
             </button>
-        </htmlForm>
+        </form>
     );
 };
 

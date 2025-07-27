@@ -14,6 +14,7 @@
     "next": "14.2.30",
     "react": "^18",
     "react-dom": "^18",
+    "resend": "^4.7.0",
     "typography": "^0.16.24"
   },
   "devDependencies": {

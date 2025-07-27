@@ -13,8 +13,8 @@ const EventDetailsPage = async ({params: {id}}) => {
             <HeroSection eventInfo={eventInfo} />
             <section className="container">
                 <div className="grid grid-cols-5 gap-12 my-12">
-                    <EventDetails eventInfo={eventInfo?.details} swags={eventInfo?.swags} />
-                    <EventVenue eventInfo={eventInfo?.location} />
+                    <EventDetails details={eventInfo?.details} swags={eventInfo?.swags} />
+                    <EventVenue location={eventInfo?.location} />
                 </div>
             </section>
         </>
